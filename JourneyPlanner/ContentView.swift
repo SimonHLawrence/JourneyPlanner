@@ -6,19 +6,20 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+  
+  var viewModel = JourneyDetailsViewModel()
+  
+  var body: some View {
+    NavigationStack {
+      JourneyDetailsView(viewModel: viewModel)
     }
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
+    .frame(width: 375, height: 1024)
 }

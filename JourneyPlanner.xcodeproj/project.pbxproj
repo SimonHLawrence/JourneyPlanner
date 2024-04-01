@@ -14,6 +14,19 @@
 		E20901352BB6F8C600148AE2 /* JourneyPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20901342BB6F8C600148AE2 /* JourneyPlannerTests.swift */; };
 		E209013F2BB6F8C600148AE2 /* JourneyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209013E2BB6F8C600148AE2 /* JourneyPlannerUITests.swift */; };
 		E20901412BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20901402BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift */; };
+		E209014F2BB6FB7D00148AE2 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209014E2BB6FB7D00148AE2 /* RouteView.swift */; };
+		E20901542BB6FD9300148AE2 /* TFLJourney in Frameworks */ = {isa = PBXBuildFile; productRef = E20901532BB6FD9300148AE2 /* TFLJourney */; };
+		E21687B92BB86B6800B09D85 /* LocationLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687B82BB86B6800B09D85 /* LocationLookupView.swift */; };
+		E21687BB2BB9C88C00B09D85 /* LocationLookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687BA2BB9C88C00B09D85 /* LocationLookupViewModel.swift */; };
+		E21687BD2BB9CB4F00B09D85 /* LocationSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687BC2BB9CB4F00B09D85 /* LocationSummaryView.swift */; };
+		E21687BF2BB9D87000B09D85 /* JourneyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687BE2BB9D87000B09D85 /* JourneyDetailsView.swift */; };
+		E21687C12BB9D89400B09D85 /* JourneyDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687C02BB9D89400B09D85 /* JourneyDetailsViewModel.swift */; };
+		E21687C42BB9EC7B00B09D85 /* JourneyPlannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687C32BB9EC7B00B09D85 /* JourneyPlannerModel.swift */; };
+		E21687C62BBAD2A500B09D85 /* JourneyPlannerModel+DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687C52BBAD2A500B09D85 /* JourneyPlannerModel+DTO.swift */; };
+		E21687C82BBAD3D900B09D85 /* JourneyPlannerModel+Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687C72BBAD3D900B09D85 /* JourneyPlannerModel+Mocks.swift */; };
+		E21687CA2BBAE15100B09D85 /* JourneyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */; };
+		E21687CC2BBAED5F00B09D85 /* DepartureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687CB2BBAED5F00B09D85 /* DepartureView.swift */; };
+		E21687CE2BBAF89B00B09D85 /* JourneySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +58,18 @@
 		E209013A2BB6F8C600148AE2 /* JourneyPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E209013E2BB6F8C600148AE2 /* JourneyPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerUITests.swift; sourceTree = "<group>"; };
 		E20901402BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E209014E2BB6FB7D00148AE2 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
+		E21687B82BB86B6800B09D85 /* LocationLookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookupView.swift; sourceTree = "<group>"; };
+		E21687BA2BB9C88C00B09D85 /* LocationLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookupViewModel.swift; sourceTree = "<group>"; };
+		E21687BC2BB9CB4F00B09D85 /* LocationSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSummaryView.swift; sourceTree = "<group>"; };
+		E21687BE2BB9D87000B09D85 /* JourneyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyDetailsView.swift; sourceTree = "<group>"; };
+		E21687C02BB9D89400B09D85 /* JourneyDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyDetailsViewModel.swift; sourceTree = "<group>"; };
+		E21687C32BB9EC7B00B09D85 /* JourneyPlannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerModel.swift; sourceTree = "<group>"; };
+		E21687C52BBAD2A500B09D85 /* JourneyPlannerModel+DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JourneyPlannerModel+DTO.swift"; sourceTree = "<group>"; };
+		E21687C72BBAD3D900B09D85 /* JourneyPlannerModel+Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JourneyPlannerModel+Mocks.swift"; sourceTree = "<group>"; };
+		E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyResultsView.swift; sourceTree = "<group>"; };
+		E21687CB2BBAED5F00B09D85 /* DepartureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureView.swift; sourceTree = "<group>"; };
+		E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneySummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20901542BB6FD9300148AE2 /* TFLJourney in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +105,7 @@
 				E20901332BB6F8C600148AE2 /* JourneyPlannerTests */,
 				E209013D2BB6F8C600148AE2 /* JourneyPlannerUITests */,
 				E20901202BB6F8C500148AE2 /* Products */,
+				E20901522BB6FD9300148AE2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +122,21 @@
 		E20901212BB6F8C500148AE2 /* JourneyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				E21687C22BB9EC6800B09D85 /* Model */,
 				E20901222BB6F8C500148AE2 /* JourneyPlannerApp.swift */,
 				E20901242BB6F8C500148AE2 /* ContentView.swift */,
 				E20901262BB6F8C600148AE2 /* Assets.xcassets */,
 				E20901282BB6F8C600148AE2 /* JourneyPlanner.entitlements */,
 				E20901292BB6F8C600148AE2 /* Preview Content */,
+				E209014E2BB6FB7D00148AE2 /* RouteView.swift */,
+				E21687B82BB86B6800B09D85 /* LocationLookupView.swift */,
+				E21687BA2BB9C88C00B09D85 /* LocationLookupViewModel.swift */,
+				E21687BC2BB9CB4F00B09D85 /* LocationSummaryView.swift */,
+				E21687BE2BB9D87000B09D85 /* JourneyDetailsView.swift */,
+				E21687C02BB9D89400B09D85 /* JourneyDetailsViewModel.swift */,
+				E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */,
+				E21687CB2BBAED5F00B09D85 /* DepartureView.swift */,
+				E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */,
 			);
 			path = JourneyPlanner;
 			sourceTree = "<group>";
@@ -129,6 +166,23 @@
 			path = JourneyPlannerUITests;
 			sourceTree = "<group>";
 		};
+		E20901522BB6FD9300148AE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E21687C22BB9EC6800B09D85 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E21687C32BB9EC7B00B09D85 /* JourneyPlannerModel.swift */,
+				E21687C52BBAD2A500B09D85 /* JourneyPlannerModel+DTO.swift */,
+				E21687C72BBAD3D900B09D85 /* JourneyPlannerModel+Mocks.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,8 +197,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				E20901562BB6FDA200148AE2 /* PBXTargetDependency */,
 			);
 			name = JourneyPlanner;
+			packageProductDependencies = (
+				E20901532BB6FD9300148AE2 /* TFLJourney */,
+			);
 			productName = JourneyPlanner;
 			productReference = E209011F2BB6F8C500148AE2 /* JourneyPlanner.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +275,9 @@
 				Base,
 			);
 			mainGroup = E20901162BB6F8C500148AE2;
+			packageReferences = (
+				E209014D2BB6F90C00148AE2 /* XCRemoteSwiftPackageReference "TFLJourney" */,
+			);
 			productRefGroup = E20901202BB6F8C500148AE2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +320,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E21687BF2BB9D87000B09D85 /* JourneyDetailsView.swift in Sources */,
 				E20901252BB6F8C500148AE2 /* ContentView.swift in Sources */,
+				E21687CE2BBAF89B00B09D85 /* JourneySummaryView.swift in Sources */,
 				E20901232BB6F8C500148AE2 /* JourneyPlannerApp.swift in Sources */,
+				E21687B92BB86B6800B09D85 /* LocationLookupView.swift in Sources */,
+				E21687C12BB9D89400B09D85 /* JourneyDetailsViewModel.swift in Sources */,
+				E209014F2BB6FB7D00148AE2 /* RouteView.swift in Sources */,
+				E21687BB2BB9C88C00B09D85 /* LocationLookupViewModel.swift in Sources */,
+				E21687C62BBAD2A500B09D85 /* JourneyPlannerModel+DTO.swift in Sources */,
+				E21687CC2BBAED5F00B09D85 /* DepartureView.swift in Sources */,
+				E21687CA2BBAE15100B09D85 /* JourneyResultsView.swift in Sources */,
+				E21687C82BBAD3D900B09D85 /* JourneyPlannerModel+Mocks.swift in Sources */,
+				E21687BD2BB9CB4F00B09D85 /* LocationSummaryView.swift in Sources */,
+				E21687C42BB9EC7B00B09D85 /* JourneyPlannerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +366,10 @@
 			isa = PBXTargetDependency;
 			target = E209011E2BB6F8C500148AE2 /* JourneyPlanner */;
 			targetProxy = E209013B2BB6F8C600148AE2 /* PBXContainerItemProxy */;
+		};
+		E20901562BB6FDA200148AE2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E20901552BB6FDA200148AE2 /* TFLJourney */;
 		};
 /* End PBXTargetDependency section */
 
@@ -617,6 +694,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E209014D2BB6F90C00148AE2 /* XCRemoteSwiftPackageReference "TFLJourney" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:SimonHLawrence/TFLJourney.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E20901532BB6FD9300148AE2 /* TFLJourney */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E209014D2BB6F90C00148AE2 /* XCRemoteSwiftPackageReference "TFLJourney" */;
+			productName = TFLJourney;
+		};
+		E20901552BB6FDA200148AE2 /* TFLJourney */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E209014D2BB6F90C00148AE2 /* XCRemoteSwiftPackageReference "TFLJourney" */;
+			productName = TFLJourney;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E20901172BB6F8C500148AE2 /* Project object */;
 }
