@@ -122,21 +122,14 @@
 		E20901212BB6F8C500148AE2 /* JourneyPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				E21687C22BB9EC6800B09D85 /* Model */,
-				E20901222BB6F8C500148AE2 /* JourneyPlannerApp.swift */,
-				E20901242BB6F8C500148AE2 /* ContentView.swift */,
-				E20901262BB6F8C600148AE2 /* Assets.xcassets */,
 				E20901282BB6F8C600148AE2 /* JourneyPlanner.entitlements */,
+				E20901242BB6F8C500148AE2 /* ContentView.swift */,
+				E20901222BB6F8C500148AE2 /* JourneyPlannerApp.swift */,
+				E20901262BB6F8C600148AE2 /* Assets.xcassets */,
+				E21687C22BB9EC6800B09D85 /* Model */,
 				E20901292BB6F8C600148AE2 /* Preview Content */,
-				E209014E2BB6FB7D00148AE2 /* RouteView.swift */,
-				E21687B82BB86B6800B09D85 /* LocationLookupView.swift */,
-				E21687BA2BB9C88C00B09D85 /* LocationLookupViewModel.swift */,
-				E21687BC2BB9CB4F00B09D85 /* LocationSummaryView.swift */,
-				E21687BE2BB9D87000B09D85 /* JourneyDetailsView.swift */,
-				E21687C02BB9D89400B09D85 /* JourneyDetailsViewModel.swift */,
-				E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */,
-				E21687CB2BBAED5F00B09D85 /* DepartureView.swift */,
-				E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */,
+				E2AFC6D22BBB0EC3002A4498 /* Results */,
+				E2AFC6D12BBB0EB4002A4498 /* Searching */,
 			);
 			path = JourneyPlanner;
 			sourceTree = "<group>";
@@ -181,6 +174,29 @@
 				E21687C72BBAD3D900B09D85 /* JourneyPlannerModel+Mocks.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E2AFC6D12BBB0EB4002A4498 /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+				E21687CB2BBAED5F00B09D85 /* DepartureView.swift */,
+				E21687BE2BB9D87000B09D85 /* JourneyDetailsView.swift */,
+				E21687C02BB9D89400B09D85 /* JourneyDetailsViewModel.swift */,
+				E21687B82BB86B6800B09D85 /* LocationLookupView.swift */,
+				E21687BA2BB9C88C00B09D85 /* LocationLookupViewModel.swift */,
+				E21687BC2BB9CB4F00B09D85 /* LocationSummaryView.swift */,
+			);
+			path = Searching;
+			sourceTree = "<group>";
+		};
+		E2AFC6D22BBB0EC3002A4498 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				E209014E2BB6FB7D00148AE2 /* RouteView.swift */,
+				E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */,
+				E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */,
+			);
+			path = Results;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
