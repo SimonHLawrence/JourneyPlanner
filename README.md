@@ -1,6 +1,6 @@
 # Journey Planner
 
-![](https://img.shields.io/badge/Code_Coverage-97%25-blue)
+![](https://img.shields.io/badge/Code_Coverage-97%25-blue) ![](https://img.shields.io/badge/Xcode-15.3-green) ![](https://img.shields.io/badge/Xcode-15.3-green) ![](https://img.shields.io/badge/iOS-17.4-purple) ![](https://img.shields.io/badge/MacOS-15.3-orange)
 
 A simple SwiftUI app using the Transport For London Journey Planner API.
 
