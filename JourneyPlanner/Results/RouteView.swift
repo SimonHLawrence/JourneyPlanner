@@ -37,13 +37,12 @@ class RouteViewModel: ObservableObject {
   }
   
   func format(step: Step) -> String {
-    "\(step.turnDirection ?? "") \(step.stepDescription ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
+    return "\(step.turnDirection ?? "") \(step.stepDescription ?? "")".trimmingCharacters(in: .whitespacesAndNewlines)
   }
   
   func imageFor(mode: String) -> String {
-    print(mode)
     switch mode {
-    case "national-rail", "tube":
+    case "national-rail", "tube", "elizabeth-line", "overground":
       return "train.side.rear.car"
     case "bus":
       return "bus.doubledecker"

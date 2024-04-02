@@ -28,7 +28,7 @@ extension Step {
     if let latitude = step.latitude, let longitude = step.longitude {
       coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
-    self.init(turnDirection: step.turnDirection,
+    self.init(turnDirection: step.turnDirection?.replacingOccurrences(of: "_", with: " "),
               stepDescription: step.description,
               coordinate: coordinate)
   }

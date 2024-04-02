@@ -17,7 +17,9 @@ class JourneySummaryViewModel: ObservableObject {
     self.journey = journey
     let duration = Duration.seconds(journey.duration)
     let modes = Set(journey.legs.compactMap { $0.mode.capitalized })
-    self.modes = modes.sorted().joined(separator: ", ")
+    self.modes = modes
+      .map { $0.replacingOccurrences(of: "-", with: " ")}
+      .joined(separator: ", ")
     self.duration = "Duration \(duration.formatted())"
   }
 }

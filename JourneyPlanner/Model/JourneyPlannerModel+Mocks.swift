@@ -34,7 +34,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "RIGHT",
+          turnDirection: "RIGHT",
           stepDescription: "on to Bank End, continue for 24 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.507103913869997,
@@ -42,7 +42,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "SLIGHT_LEFT",
+          turnDirection: "SLIGHT LEFT",
           stepDescription: "on to Bankside, continue for 407 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.507319354900005,
@@ -50,7 +50,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "STRAIGHT",
+          turnDirection: "STRAIGHT",
           stepDescription: "for 31 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.508306869039998,
@@ -58,7 +58,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "RIGHT",
+          turnDirection: "RIGHT",
           stepDescription: "on to Millennium Bridge, continue for 330 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.508278161519996,
@@ -66,7 +66,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "STRAIGHT",
+          turnDirection: "STRAIGHT",
           stepDescription: "on to Peter\'s Hill, continue for 76 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.511243470949999,
@@ -74,7 +74,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "RIGHT",
+          turnDirection: "RIGHT",
           stepDescription: "on to Queen Victoria Street, continue for 213 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.511925743709995,
@@ -82,7 +82,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "LEFT",
+          turnDirection: "LEFT",
           stepDescription: "on to Bread Street, continue for 54 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.512074370389996,
@@ -90,7 +90,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "STRAIGHT",
+          turnDirection: "STRAIGHT",
           stepDescription: "for 12 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.51253909415,
@@ -98,7 +98,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "STRAIGHT",
+          turnDirection: "STRAIGHT",
           stepDescription: "on to Bread Street, continue for 178 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.512646697899996,
@@ -106,7 +106,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "LEFT",
+          turnDirection: "LEFT",
           stepDescription: "on to Cheapside, continue for 19 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.514181842600003,
@@ -114,7 +114,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "RIGHT",
+          turnDirection: "RIGHT",
           stepDescription: "on to Wood Street, continue for 163 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.51422223414,
@@ -122,7 +122,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "LEFT",
+          turnDirection: "LEFT",
           stepDescription: "on to Gresham Street, continue for 15 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.515674297689998,
@@ -130,7 +130,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "RIGHT",
+          turnDirection: "RIGHT",
           stepDescription: "on to Wood Street, continue for 209 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.515713519469998,
@@ -138,7 +138,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "SHARP_LEFT",
+          turnDirection: "SHARP LEFT",
           stepDescription: "on to London Wall, continue for 10 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.51747856195,
@@ -146,7 +146,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "SLIGHT_RIGHT",
+          turnDirection: "SLIGHT RIGHT",
           stepDescription: "for 8 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.517480902910002,
@@ -154,7 +154,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "SLIGHT_RIGHT",
+          turnDirection: "SLIGHT RIGHT",
           stepDescription: "on to Alban Highwalk, continue for 84 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.517527239689997,
@@ -162,7 +162,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "STRAIGHT",
+          turnDirection: "STRAIGHT",
           stepDescription: "on to The Postern, continue for 76 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.518230848899996,
@@ -170,7 +170,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "SLIGHT_LEFT",
+          turnDirection: "SLIGHT LEFT",
           stepDescription: "on to Gilbert Bridge, continue for 86 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.518872019619998,
@@ -178,7 +178,7 @@ extension Instruction: Mock {
           )
         ),
         Step(
-        turnDirection: "STRAIGHT",
+          turnDirection: "STRAIGHT",
           stepDescription: "on to Lakeside Terrace, continue for 67 metres",
           coordinate: CLLocationCoordinate2D(
             latitude: 51.519493021449996,
@@ -267,7 +267,7 @@ extension Leg: Mock {
 }
 
 extension Journey: Mock {
-
+  
   static func mock() -> Journey {
     
     return Journey(duration: journeyDuration, start: now, arrival: future, legs: [Leg.mock()])

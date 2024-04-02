@@ -11,6 +11,7 @@ struct JourneyDetailsView: View {
   
   @ObservedObject var viewModel: JourneyDetailsViewModel
   @State var searchComplete: Bool = false
+  @State var searchInProgress: Bool = false
   
   var body: some View {
     List {
@@ -31,13 +32,30 @@ struct JourneyDetailsView: View {
     })
     .navigationDestination(isPresented: self.$searchComplete, destination: {
       JourneyResultsView(viewModel: JourneyResultsViewModel(journeys: viewModel.results))
-    })
+    }).overlay {
+      Group {
+        if self.searchInProgress {
+          VStack {
+            ProgressView() {
+              Text("Finding routes...")
+            }
+            .controlSize(.large)
+            .padding()
+          }
+          .background {
+            Color(.secondarySystemBackground)
+          }
+        }
+      }
+    }
   }
   
   func findRoutes() {
+    searchInProgress = true
     Task {
       try await viewModel.submit()
       await MainActor.run {
+        searchInProgress = false
         searchComplete = true
       }
     }
