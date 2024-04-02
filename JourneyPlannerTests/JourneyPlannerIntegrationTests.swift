@@ -1,5 +1,5 @@
 //
-//  JourneyPlannerTests.swift
+//  JourneyPlannerIntegrationTests.swift
 //  JourneyPlannerTests
 //
 //  Created by Simon Lawrence on 29/03/2024.
@@ -15,7 +15,7 @@ struct WellKnownCoordinates {
   static let claphamJunction = CLLocationCoordinate2D(latitude: 51.4652, longitude: -0.1708)
 }
 
-final class JourneyPlannerTests: XCTestCase {
+final class JourneyPlannerIntegrationTests: XCTestCase {
   
   func testJourneyPlannerService() async throws {
     

@@ -11,9 +11,8 @@
 		E20901252BB6F8C500148AE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20901242BB6F8C500148AE2 /* ContentView.swift */; };
 		E20901272BB6F8C600148AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E20901262BB6F8C600148AE2 /* Assets.xcassets */; };
 		E209012B2BB6F8C600148AE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E209012A2BB6F8C600148AE2 /* Preview Assets.xcassets */; };
-		E20901352BB6F8C600148AE2 /* JourneyPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20901342BB6F8C600148AE2 /* JourneyPlannerTests.swift */; };
+		E20901352BB6F8C600148AE2 /* JourneyPlannerIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20901342BB6F8C600148AE2 /* JourneyPlannerIntegrationTests.swift */; };
 		E209013F2BB6F8C600148AE2 /* JourneyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209013E2BB6F8C600148AE2 /* JourneyPlannerUITests.swift */; };
-		E20901412BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20901402BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift */; };
 		E209014F2BB6FB7D00148AE2 /* RouteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209014E2BB6FB7D00148AE2 /* RouteView.swift */; };
 		E20901542BB6FD9300148AE2 /* TFLJourney in Frameworks */ = {isa = PBXBuildFile; productRef = E20901532BB6FD9300148AE2 /* TFLJourney */; };
 		E21687B92BB86B6800B09D85 /* LocationLookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687B82BB86B6800B09D85 /* LocationLookupView.swift */; };
@@ -59,10 +58,9 @@
 		E20901282BB6F8C600148AE2 /* JourneyPlanner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JourneyPlanner.entitlements; sourceTree = "<group>"; };
 		E209012A2BB6F8C600148AE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E20901302BB6F8C600148AE2 /* JourneyPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E20901342BB6F8C600148AE2 /* JourneyPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerTests.swift; sourceTree = "<group>"; };
+		E20901342BB6F8C600148AE2 /* JourneyPlannerIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerIntegrationTests.swift; sourceTree = "<group>"; };
 		E209013A2BB6F8C600148AE2 /* JourneyPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E209013E2BB6F8C600148AE2 /* JourneyPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerUITests.swift; sourceTree = "<group>"; };
-		E20901402BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E209014E2BB6FB7D00148AE2 /* RouteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteView.swift; sourceTree = "<group>"; };
 		E21687B82BB86B6800B09D85 /* LocationLookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookupView.swift; sourceTree = "<group>"; };
 		E21687BA2BB9C88C00B09D85 /* LocationLookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookupViewModel.swift; sourceTree = "<group>"; };
@@ -158,7 +156,7 @@
 		E20901332BB6F8C600148AE2 /* JourneyPlannerTests */ = {
 			isa = PBXGroup;
 			children = (
-				E20901342BB6F8C600148AE2 /* JourneyPlannerTests.swift */,
+				E20901342BB6F8C600148AE2 /* JourneyPlannerIntegrationTests.swift */,
 			);
 			path = JourneyPlannerTests;
 			sourceTree = "<group>";
@@ -167,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				E209013E2BB6F8C600148AE2 /* JourneyPlannerUITests.swift */,
-				E20901402BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift */,
 				E27865082BBC348F008E15E5 /* Extensions.swift */,
 			);
 			path = JourneyPlannerUITests;
@@ -378,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20901352BB6F8C600148AE2 /* JourneyPlannerTests.swift in Sources */,
+				E20901352BB6F8C600148AE2 /* JourneyPlannerIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E20901412BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift in Sources */,
 				E27865092BBC348F008E15E5 /* Extensions.swift in Sources */,
 				E209013F2BB6F8C600148AE2 /* JourneyPlannerUITests.swift in Sources */,
 			);
