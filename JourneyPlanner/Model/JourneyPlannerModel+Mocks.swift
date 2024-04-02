@@ -25,26 +25,167 @@ extension Instruction: Mock {
       summary: "Walk to 1 Lakeside Terrace",
       detailed: "Walk to 1 Lakeside Terrace",
       steps: [
-        Step(turnDirection: "STRAIGHT", stepDescription: "Clink Street for 67 metres"),
-        Step(turnDirection: "RIGHT", stepDescription: "on to Bank End, continue for 24 metres"),
-        Step(turnDirection: "SLIGHT_LEFT", stepDescription: "on to Bankside, continue for 407 metres"),
-        Step(turnDirection: "STRAIGHT", stepDescription: "for 31 metres"),
-        Step(turnDirection: "RIGHT", stepDescription: "on to Millennium Bridge, continue for 330 metres"),
-        Step(turnDirection: "STRAIGHT", stepDescription: "on to Peter\'s Hill, continue for 76 metres"),
-        Step(turnDirection: "RIGHT", stepDescription: "on to Queen Victoria Street, continue for 213 metres"),
-        Step(turnDirection: "LEFT", stepDescription: "on to Bread Street, continue for 54 metres"),
-        Step(turnDirection: "STRAIGHT", stepDescription: "for 12 metres"),
-        Step(turnDirection: "STRAIGHT", stepDescription: "on to Bread Street, continue for 178 metres"),
-        Step(turnDirection: "LEFT", stepDescription: "on to Cheapside, continue for 19 metres"),
-        Step(turnDirection: "RIGHT", stepDescription: "on to Wood Street, continue for 163 metres"),
-        Step(turnDirection: "LEFT", stepDescription: "on to Gresham Street, continue for 15 metres"),
-        Step(turnDirection: "RIGHT", stepDescription: "on to Wood Street, continue for 209 metres"),
-        Step(turnDirection: "SHARP_LEFT", stepDescription: "on to London Wall, continue for 10 metres"),
-        Step(turnDirection: "SLIGHT_RIGHT", stepDescription: "for 8 metres"),
-        Step(turnDirection: "SLIGHT_RIGHT", stepDescription: "on to Alban Highwalk, continue for 84 metres"),
-        Step(turnDirection: "STRAIGHT", stepDescription: "on to The Postern, continue for 76 metres"),
-        Step(turnDirection: "SLIGHT_LEFT", stepDescription: "on to Gilbert Bridge, continue for 86 metres"),
-        Step(turnDirection: "STRAIGHT", stepDescription: "on to Lakeside Terrace, continue for 67 metres")])
+        Step(
+          turnDirection: "STRAIGHT",
+          stepDescription: "Clink Street for 67 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.507097205870004,
+            longitude: -0.091769005759999994
+          )
+        ),
+        Step(
+        turnDirection: "RIGHT",
+          stepDescription: "on to Bank End, continue for 24 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.507103913869997,
+            longitude: -0.09273420798000001
+          )
+        ),
+        Step(
+        turnDirection: "SLIGHT_LEFT",
+          stepDescription: "on to Bankside, continue for 407 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.507319354900005,
+            longitude: -0.09271080089
+          )
+        ),
+        Step(
+        turnDirection: "STRAIGHT",
+          stepDescription: "for 31 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.508306869039998,
+            longitude: -0.098145573329999999
+          )
+        ),
+        Step(
+        turnDirection: "RIGHT",
+          stepDescription: "on to Millennium Bridge, continue for 330 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.508278161519996,
+            longitude: -0.098593495710000006
+          )
+        ),
+        Step(
+        turnDirection: "STRAIGHT",
+          stepDescription: "on to Peter\'s Hill, continue for 76 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.511243470949999,
+            longitude: -0.098455618369999997
+          )
+        ),
+        Step(
+        turnDirection: "RIGHT",
+          stepDescription: "on to Queen Victoria Street, continue for 213 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.511925743709995,
+            longitude: -0.098383972439999994
+          )
+        ),
+        Step(
+        turnDirection: "LEFT",
+          stepDescription: "on to Bread Street, continue for 54 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.512074370389996,
+            longitude: -0.095351316229999997
+          )
+        ),
+        Step(
+        turnDirection: "STRAIGHT",
+          stepDescription: "for 12 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.51253909415,
+            longitude: -0.095173401509999991
+          )
+        ),
+        Step(
+        turnDirection: "STRAIGHT",
+          stepDescription: "on to Bread Street, continue for 178 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.512646697899996,
+            longitude: -0.09515450092000001
+          )
+        ),
+        Step(
+        turnDirection: "LEFT",
+          stepDescription: "on to Cheapside, continue for 19 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.514181842600003,
+            longitude: -0.094441900620000005
+          )
+        ),
+        Step(
+        turnDirection: "RIGHT",
+          stepDescription: "on to Wood Street, continue for 163 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.51422223414,
+            longitude: -0.094714051120000003
+          )
+        ),
+        Step(
+        turnDirection: "LEFT",
+          stepDescription: "on to Gresham Street, continue for 15 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.515674297689998,
+            longitude: -0.09442285193000001
+          )
+        ),
+        Step(
+        turnDirection: "RIGHT",
+          stepDescription: "on to Wood Street, continue for 209 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.515713519469998,
+            longitude: -0.094622995599999996
+          )
+        ),
+        Step(
+        turnDirection: "SHARP_LEFT",
+          stepDescription: "on to London Wall, continue for 10 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.51747856195,
+            longitude: -0.093670113220000004
+          )
+        ),
+        Step(
+        turnDirection: "SLIGHT_RIGHT",
+          stepDescription: "for 8 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.517480902910002,
+            longitude: -0.093814150080000006
+          )
+        ),
+        Step(
+        turnDirection: "SLIGHT_RIGHT",
+          stepDescription: "on to Alban Highwalk, continue for 84 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.517527239689997,
+            longitude: -0.093898696290000014
+          )
+        ),
+        Step(
+        turnDirection: "STRAIGHT",
+          stepDescription: "on to The Postern, continue for 76 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.518230848899996,
+            longitude: -0.093480150200000001
+          )
+        ),
+        Step(
+        turnDirection: "SLIGHT_LEFT",
+          stepDescription: "on to Gilbert Bridge, continue for 86 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.518872019619998,
+            longitude: -0.093093026780000004
+          )
+        ),
+        Step(
+        turnDirection: "STRAIGHT",
+          stepDescription: "on to Lakeside Terrace, continue for 67 metres",
+          coordinate: CLLocationCoordinate2D(
+            latitude: 51.519493021449996,
+            longitude: -0.093124743689999998
+          )
+        )
+      ])
   }
 }
 

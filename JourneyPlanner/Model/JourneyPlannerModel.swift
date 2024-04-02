@@ -8,12 +8,14 @@
 import Foundation
 import CoreLocation
 
-struct Step: Hashable, Equatable {
+struct Step: Hashable, Equatable, Identifiable {
+  var id: UUID
   var turnDirection: String?
   var stepDescription: String?
   var coordinate: CLLocationCoordinate2D?
   
-  init(coordinate: CLLocationCoordinate2D? = nil, turnDirection: String? = nil, stepDescription: String? = nil) {
+  init(id: UUID = UUID(), turnDirection: String? = nil, stepDescription: String? = nil, coordinate: CLLocationCoordinate2D? = nil) {
+    self.id = id
     self.coordinate = coordinate
     self.turnDirection = turnDirection
     self.stepDescription = stepDescription

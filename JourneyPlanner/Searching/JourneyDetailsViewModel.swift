@@ -7,18 +7,10 @@
 
 import SwiftUI
 import CoreLocation
-import TFLJourney
-import OpenAPIRuntime
-import OpenAPIURLSession
-
-extension CLLocationCoordinate2D {
-  
-  var pointOfInterest: JourneyPlanner.PointOfInterest {
-    return .init(latitude: latitude, longitude: longitude)
-  }
-}
 
 class JourneyDetailsViewModel: ObservableObject {
+  
+  private var journeyService: JourneyService
   
   @Published var startLocationTitle: String = "Starting From"
   @Published var startLocation: LocationViewModel.Location?
@@ -29,6 +21,10 @@ class JourneyDetailsViewModel: ObservableObject {
   @Published var leavingAt: Date = Date.now
   @Published var results: [Journey] = []
   
+  init(journeyService: JourneyService) {
+    self.journeyService = journeyService
+  }
+  
   func submit() async throws {
     
     guard
@@ -37,18 +33,9 @@ class JourneyDetailsViewModel: ObservableObject {
     else {
       return
     }
-    
-    let transport = URLSessionTransport()
-    let journeyPlanner = try TFLJourney.JourneyPlanner(transport: transport)
-    
     let viaCoordinate = viaLocation?.result.placemark.coordinate
     
-    let result = try await journeyPlanner.getJourneyPlan(from: fromCoordinate.pointOfInterest,
-                                                         to: toCoordinate.pointOfInterest,
-                                                         via: viaCoordinate?.pointOfInterest,
-                                                         leavingAt: leavingAt)
-    let journeys = try result.ok.body.json.journeys ?? []
-    let results =  journeys.map { Journey(journey: $0) }
+    let results = try await journeyService.getJourneys(from: fromCoordinate, to: toCoordinate, via: viaCoordinate, leavingAt: leavingAt)
     
     await MainActor.run {
     

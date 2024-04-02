@@ -10,7 +10,7 @@ import MapKit
 
 struct ContentView: View {
   
-  var viewModel = JourneyDetailsViewModel()
+  var viewModel = JourneyDetailsViewModel(journeyService: TFLJourneyService())
   
   var body: some View {
     NavigationStack {
@@ -21,5 +21,4 @@ struct ContentView: View {
 
 #Preview {
   ContentView()
-    .frame(width: 375, height: 1024)
 }

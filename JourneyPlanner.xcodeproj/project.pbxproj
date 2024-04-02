@@ -27,6 +27,7 @@
 		E21687CA2BBAE15100B09D85 /* JourneyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */; };
 		E21687CC2BBAED5F00B09D85 /* DepartureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687CB2BBAED5F00B09D85 /* DepartureView.swift */; };
 		E21687CE2BBAF89B00B09D85 /* JourneySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */; };
+		E27865012BBC1366008E15E5 /* JourneyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865002BBC1366008E15E5 /* JourneyService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyResultsView.swift; sourceTree = "<group>"; };
 		E21687CB2BBAED5F00B09D85 /* DepartureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureView.swift; sourceTree = "<group>"; };
 		E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneySummaryView.swift; sourceTree = "<group>"; };
+		E27865002BBC1366008E15E5 /* JourneyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				E20901292BB6F8C600148AE2 /* Preview Content */,
 				E2AFC6D22BBB0EC3002A4498 /* Results */,
 				E2AFC6D12BBB0EB4002A4498 /* Searching */,
+				E27865002BBC1366008E15E5 /* JourneyService.swift */,
 			);
 			path = JourneyPlanner;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E21687BF2BB9D87000B09D85 /* JourneyDetailsView.swift in Sources */,
+				E27865012BBC1366008E15E5 /* JourneyService.swift in Sources */,
 				E20901252BB6F8C500148AE2 /* ContentView.swift in Sources */,
 				E21687CE2BBAF89B00B09D85 /* JourneySummaryView.swift in Sources */,
 				E20901232BB6F8C500148AE2 /* JourneyPlannerApp.swift in Sources */,

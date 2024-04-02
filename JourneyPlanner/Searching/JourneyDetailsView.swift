@@ -46,6 +46,6 @@ struct JourneyDetailsView: View {
 
 #Preview {
   NavigationStack {
-    JourneyDetailsView(viewModel: JourneyDetailsViewModel())
+    JourneyDetailsView(viewModel: JourneyDetailsViewModel(journeyService: MockJourneyService()))
   }
 }
