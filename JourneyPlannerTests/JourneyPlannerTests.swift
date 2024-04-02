@@ -6,30 +6,22 @@
 //
 
 import XCTest
+import CoreLocation
+@testable import JourneyPlanner
+
+struct WellKnownCoordinates {
+  static let londonWaterloo = CLLocationCoordinate2D(latitude: 51.5032, longitude: -0.1123)
+  static let londonVictoria = CLLocationCoordinate2D(latitude: 51.4952, longitude: -0.1439)
+  static let claphamJunction = CLLocationCoordinate2D(latitude: 51.4652, longitude: -0.1708)
+}
 
 final class JourneyPlannerTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+  
+  func testJourneyPlannerService() async throws {
+    
+    let service = TFLJourneyService()
+    let journeys = try await service.getJourneys(from: WellKnownCoordinates.londonWaterloo, to: WellKnownCoordinates.londonVictoria, via: WellKnownCoordinates.claphamJunction, leavingAt: Date.now)
+    
+    XCTAssertFalse(journeys.isEmpty)
+  }
 }

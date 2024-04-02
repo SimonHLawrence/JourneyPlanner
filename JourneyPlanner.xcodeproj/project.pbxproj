@@ -29,6 +29,9 @@
 		E21687CE2BBAF89B00B09D85 /* JourneySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */; };
 		E27865012BBC1366008E15E5 /* JourneyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865002BBC1366008E15E5 /* JourneyService.swift */; };
 		E27865032BBC2FFC008E15E5 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865022BBC2FFC008E15E5 /* RouteViewModel.swift */; };
+		E27865052BBC30D3008E15E5 /* JourneySummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865042BBC30D3008E15E5 /* JourneySummaryViewModel.swift */; };
+		E27865072BBC30F0008E15E5 /* JourneyResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865062BBC30F0008E15E5 /* JourneyResultsViewModel.swift */; };
+		E27865092BBC348F008E15E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865082BBC348F008E15E5 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,10 @@
 		E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneySummaryView.swift; sourceTree = "<group>"; };
 		E27865002BBC1366008E15E5 /* JourneyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyService.swift; sourceTree = "<group>"; };
 		E27865022BBC2FFC008E15E5 /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
+		E27865042BBC30D3008E15E5 /* JourneySummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneySummaryViewModel.swift; sourceTree = "<group>"; };
+		E27865062BBC30F0008E15E5 /* JourneyResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyResultsViewModel.swift; sourceTree = "<group>"; };
+		E27865082BBC348F008E15E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E278650A2BBC43AB008E15E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +133,7 @@
 		E20901212BB6F8C500148AE2 /* JourneyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				E278650A2BBC43AB008E15E5 /* Info.plist */,
 				E20901282BB6F8C600148AE2 /* JourneyPlanner.entitlements */,
 				E20901242BB6F8C500148AE2 /* ContentView.swift */,
 				E20901222BB6F8C500148AE2 /* JourneyPlannerApp.swift */,
@@ -160,6 +168,7 @@
 			children = (
 				E209013E2BB6F8C600148AE2 /* JourneyPlannerUITests.swift */,
 				E20901402BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift */,
+				E27865082BBC348F008E15E5 /* Extensions.swift */,
 			);
 			path = JourneyPlannerUITests;
 			sourceTree = "<group>";
@@ -198,7 +207,9 @@
 			isa = PBXGroup;
 			children = (
 				E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */,
+				E27865062BBC30F0008E15E5 /* JourneyResultsViewModel.swift */,
 				E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */,
+				E27865042BBC30D3008E15E5 /* JourneySummaryViewModel.swift */,
 				E209014E2BB6FB7D00148AE2 /* RouteView.swift */,
 				E27865022BBC2FFC008E15E5 /* RouteViewModel.swift */,
 			);
@@ -348,6 +359,8 @@
 				E21687CE2BBAF89B00B09D85 /* JourneySummaryView.swift in Sources */,
 				E20901232BB6F8C500148AE2 /* JourneyPlannerApp.swift in Sources */,
 				E21687B92BB86B6800B09D85 /* LocationLookupView.swift in Sources */,
+				E27865072BBC30F0008E15E5 /* JourneyResultsViewModel.swift in Sources */,
+				E27865052BBC30D3008E15E5 /* JourneySummaryViewModel.swift in Sources */,
 				E21687C12BB9D89400B09D85 /* JourneyDetailsViewModel.swift in Sources */,
 				E209014F2BB6FB7D00148AE2 /* RouteView.swift in Sources */,
 				E21687BB2BB9C88C00B09D85 /* LocationLookupViewModel.swift in Sources */,
@@ -374,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20901412BB6F8C600148AE2 /* JourneyPlannerUITestsLaunchTests.swift in Sources */,
+				E27865092BBC348F008E15E5 /* Extensions.swift in Sources */,
 				E209013F2BB6F8C600148AE2 /* JourneyPlannerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,12 +539,16 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JourneyPlanner/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -542,7 +560,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akordo.JourneyPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -563,12 +580,16 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JourneyPlanner/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -580,7 +601,6 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.akordo.JourneyPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -19,12 +19,15 @@ struct LocationLookupView: View {
       List(viewModel.resolvedLocations) { location in
         VStack(alignment: .leading) {
           Text(location.result.name ?? "").font(.headline)
+            .accessibilityIdentifier(location.result.name ?? "locationlookupview.result")
           Text(location.postalAddress).font(.subheadline)
         }.onTapGesture {
           viewModel.selectedLocation = location
           presentationMode.wrappedValue.dismiss()
-        }.accessibilityIdentifier(location.result.name ?? "locationlookupview.result")
-      }.listStyle(.inset)
+        }
+      }
+      .listStyle(.inset)
+      .accessibilityIdentifier("locationlookupview")
     }
     .padding()
     .navigationTitle(viewModel.title)

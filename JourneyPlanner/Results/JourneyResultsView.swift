@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-class JourneyResultsViewModel: ObservableObject {
-
-  @Published var journeys: [Journey]
-  
-  init(journeys: [Journey]) {
-    self.journeys = journeys
-  }
-}
-
 struct JourneyResultsView: View {
   
   var viewModel: JourneyResultsViewModel
