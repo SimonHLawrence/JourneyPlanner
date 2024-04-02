@@ -17,6 +17,7 @@ struct DepartureView: View {
       DatePicker("", selection: $leaving, in: Date()..., displayedComponents: .hourAndMinute)
         .datePickerStyle(.compact)
         .labelsHidden()
+        .accessibilityIdentifier("departureview.leavingat")
     }
   }
 }

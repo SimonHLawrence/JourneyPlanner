@@ -15,6 +15,7 @@ struct LocationLookupView: View {
   var body: some View {
     VStack(alignment: .leading) {
       TextField("Enter a London address...", text: $viewModel.locationText)
+        .accessibilityIdentifier("locationlookupview.locationtext")
       List(viewModel.resolvedLocations) { location in
         VStack(alignment: .leading) {
           Text(location.result.name ?? "").font(.headline)
@@ -22,7 +23,7 @@ struct LocationLookupView: View {
         }.onTapGesture {
           viewModel.selectedLocation = location
           presentationMode.wrappedValue.dismiss()
-        }
+        }.accessibilityIdentifier(location.result.name ?? "locationlookupview.result")
       }.listStyle(.inset)
     }
     .padding()

@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+func createJourneyService() -> JourneyService {
+  if let isUITest = ProcessInfo.processInfo.environment["XCUITest"],
+     isUITest == "YES" {
+    return MockJourneyService()
+  }
+  return TFLJourneyService()
+}
+
 @main
 struct JourneyPlannerApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      ContentView(viewModel: JourneyDetailsViewModel(journeyService: createJourneyService()))
     }
   }
 }

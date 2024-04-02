@@ -28,6 +28,7 @@
 		E21687CC2BBAED5F00B09D85 /* DepartureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687CB2BBAED5F00B09D85 /* DepartureView.swift */; };
 		E21687CE2BBAF89B00B09D85 /* JourneySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */; };
 		E27865012BBC1366008E15E5 /* JourneyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865002BBC1366008E15E5 /* JourneyService.swift */; };
+		E27865032BBC2FFC008E15E5 /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865022BBC2FFC008E15E5 /* RouteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		E21687CB2BBAED5F00B09D85 /* DepartureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartureView.swift; sourceTree = "<group>"; };
 		E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneySummaryView.swift; sourceTree = "<group>"; };
 		E27865002BBC1366008E15E5 /* JourneyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyService.swift; sourceTree = "<group>"; };
+		E27865022BBC2FFC008E15E5 /* RouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +129,12 @@
 				E20901282BB6F8C600148AE2 /* JourneyPlanner.entitlements */,
 				E20901242BB6F8C500148AE2 /* ContentView.swift */,
 				E20901222BB6F8C500148AE2 /* JourneyPlannerApp.swift */,
+				E27865002BBC1366008E15E5 /* JourneyService.swift */,
 				E20901262BB6F8C600148AE2 /* Assets.xcassets */,
 				E21687C22BB9EC6800B09D85 /* Model */,
 				E20901292BB6F8C600148AE2 /* Preview Content */,
 				E2AFC6D22BBB0EC3002A4498 /* Results */,
 				E2AFC6D12BBB0EB4002A4498 /* Searching */,
-				E27865002BBC1366008E15E5 /* JourneyService.swift */,
 			);
 			path = JourneyPlanner;
 			sourceTree = "<group>";
@@ -195,9 +197,10 @@
 		E2AFC6D22BBB0EC3002A4498 /* Results */ = {
 			isa = PBXGroup;
 			children = (
-				E209014E2BB6FB7D00148AE2 /* RouteView.swift */,
 				E21687C92BBAE15100B09D85 /* JourneyResultsView.swift */,
 				E21687CD2BBAF89B00B09D85 /* JourneySummaryView.swift */,
+				E209014E2BB6FB7D00148AE2 /* RouteView.swift */,
+				E27865022BBC2FFC008E15E5 /* RouteViewModel.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				E209014F2BB6FB7D00148AE2 /* RouteView.swift in Sources */,
 				E21687BB2BB9C88C00B09D85 /* LocationLookupViewModel.swift in Sources */,
 				E21687C62BBAD2A500B09D85 /* JourneyPlannerModel+DTO.swift in Sources */,
+				E27865032BBC2FFC008E15E5 /* RouteViewModel.swift in Sources */,
 				E21687CC2BBAED5F00B09D85 /* DepartureView.swift in Sources */,
 				E21687CA2BBAE15100B09D85 /* JourneyResultsView.swift in Sources */,
 				E21687C82BBAD3D900B09D85 /* JourneyPlannerModel+Mocks.swift in Sources */,

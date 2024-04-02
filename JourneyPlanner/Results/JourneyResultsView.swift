@@ -29,6 +29,7 @@ struct JourneyResultsView: View {
         JourneySummaryView(viewModel: JourneySummaryViewModel(journey: journey))
       })
     }
+    .accessibilityIdentifier("journeyresultsview")
     .navigationTitle("Results")
   }
 }

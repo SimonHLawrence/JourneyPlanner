@@ -17,19 +17,26 @@ struct JourneyDetailsView: View {
     List {
       LocationSummaryView(title: viewModel.startLocationTitle,
                           location: $viewModel.startLocation)
+      .accessibilityIdentifier("journeydetailsview.startlocation")
       LocationSummaryView(title: viewModel.viaLocationTitle,
                           isOptional: true,
                           location: $viewModel.viaLocation)
+      .accessibilityIdentifier("journeydetailsview.vialocation")
+      
       LocationSummaryView(title: viewModel.destinationTitle,
                           location: $viewModel.destination)
+      .accessibilityIdentifier("journeydetailsview.destination")
       DepartureView(leaving: $viewModel.leavingAt)
+        .accessibilityIdentifier("journeydetailsview.leavingat")
     }
     .listStyle(.inset)
     .navigationTitle("Plan a Journey")
     .toolbar(content: {
       Button(action: { findRoutes() }, label: { Text("Find Routes") })
         .disabled(viewModel.startLocation == nil || viewModel.destination == nil)
+        .accessibilityIdentifier("journeydetailsview.findroutes")
     })
+    .accessibilityIdentifier("journeydetailsview")
     .navigationDestination(isPresented: self.$searchComplete, destination: {
       JourneyResultsView(viewModel: JourneyResultsViewModel(journeys: viewModel.results))
     }).overlay {
