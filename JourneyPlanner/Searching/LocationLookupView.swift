@@ -15,6 +15,7 @@ struct LocationLookupView: View {
   var body: some View {
     VStack(alignment: .leading) {
       TextField("Enter a London address...", text: $viewModel.locationText)
+        .autocorrectionDisabled()
         .accessibilityIdentifier("locationlookupview.locationtext")
       List(viewModel.resolvedLocations) { location in
         VStack(alignment: .leading) {
