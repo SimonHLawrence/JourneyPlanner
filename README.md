@@ -6,4 +6,6 @@ A simple SwiftUI cross-platform app using the Transport For London Journey Plann
 
 See https://github.com/SimonHLawrence/TFLJourney for the API client, generated using Apple's Open API tools.
 
+> Note if the build fails first time due to errors from the Open API tools, building again generally fixes this.
+
 ![Journey Planner](Images/JourneyPlanner.gif)
