@@ -11,11 +11,12 @@ struct LocationSummaryView: View {
   
   var title: String
   var isOptional: Bool = false
-  @Binding var location: LocationViewModel.Location?
+  var locationLookupService: LocationLookupService
+  @Binding var location: Location?
   
   var body: some View {
     NavigationLink(destination: {
-      LocationLookupView(viewModel: LocationViewModel(title: title, selectedLocation: $location))
+      LocationLookupView(viewModel: LocationViewModel(title: title, locationLookupService: locationLookupService, selectedLocation: $location))
     }, label: {
       HStack {
         
@@ -23,7 +24,7 @@ struct LocationSummaryView: View {
           Text(title)
             .font(.title2)
           if let location = location {
-            if let name = location.result.name {
+            if let name = location.name {
               Text(name).font(.headline)
             }
             Text(location.postalAddress).font(.subheadline)
@@ -46,7 +47,7 @@ struct LocationSummaryView: View {
 #Preview {
   NavigationStack {
     List {
-      LocationSummaryView(title: "My Location", isOptional: true, location: .constant(nil))
+      LocationSummaryView(title: "My Location", isOptional: true, locationLookupService: MapKitLocationLookupService(), location: .constant(nil))
     }
   }
 }

@@ -16,14 +16,17 @@ struct JourneyDetailsView: View {
   var body: some View {
     List {
       LocationSummaryView(title: viewModel.startLocationTitle,
+                          locationLookupService: viewModel.locationLookupService, 
                           location: $viewModel.startLocation)
       .accessibilityIdentifier("journeydetailsview.startlocation")
       LocationSummaryView(title: viewModel.viaLocationTitle,
                           isOptional: true,
+                          locationLookupService: viewModel.locationLookupService,
                           location: $viewModel.viaLocation)
       .accessibilityIdentifier("journeydetailsview.vialocation")
       
       LocationSummaryView(title: viewModel.destinationTitle,
+                          locationLookupService: viewModel.locationLookupService,
                           location: $viewModel.destination)
       .accessibilityIdentifier("journeydetailsview.destination")
       DepartureView(leaving: $viewModel.leavingAt)
@@ -71,6 +74,6 @@ struct JourneyDetailsView: View {
 
 #Preview {
   NavigationStack {
-    JourneyDetailsView(viewModel: JourneyDetailsViewModel(journeyService: MockJourneyService()))
+    JourneyDetailsView(viewModel: JourneyDetailsViewModel(journeyService: MockJourneyService(), locationLookupService: MapKitLocationLookupService()))
   }
 }

@@ -7,19 +7,30 @@
 
 import SwiftUI
 
-func createJourneyService() -> JourneyService {
+func isMocking() -> Bool {
   if let isUITest = ProcessInfo.processInfo.environment["XCUITest"],
      isUITest == "YES" {
-    return MockJourneyService()
+    return true
   }
-  return TFLJourneyService()
+  return false
+}
+
+func createJourneyService() -> JourneyService {
+  
+  isMocking() ? MockJourneyService() : TFLJourneyService()
+}
+
+func createLocationLookupService() -> LocationLookupService {
+  
+  isMocking() ? MockLocationLookupService() : MapKitLocationLookupService()
 }
 
 @main
 struct JourneyPlannerApp: App {
   var body: some Scene {
     WindowGroup {
-      ContentView(viewModel: JourneyDetailsViewModel(journeyService: createJourneyService()))
+      ContentView(viewModel: JourneyDetailsViewModel(journeyService: createJourneyService(), 
+                                                     locationLookupService: createLocationLookupService()))
     }
   }
 }

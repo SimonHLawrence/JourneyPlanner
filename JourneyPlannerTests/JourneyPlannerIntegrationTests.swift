@@ -24,4 +24,18 @@ final class JourneyPlannerIntegrationTests: XCTestCase {
     
     XCTAssertFalse(journeys.isEmpty)
   }
+  
+  func testLocationLookupService() async throws {
+    
+    let service = MapKitLocationLookupService()
+    let results = try await service.performSearch(location: "Clink St")
+    
+    XCTAssertFalse(results.isEmpty)
+    
+    if let firstResult = results.first {
+      let postalAddress = firstResult.postalAddress
+      let postcodeRange = postalAddress.range(of: "SE1")
+      XCTAssertNotNil(postcodeRange)
+    }
+  }
 }

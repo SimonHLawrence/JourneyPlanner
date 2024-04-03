@@ -19,8 +19,8 @@ struct LocationLookupView: View {
         .accessibilityIdentifier("locationlookupview.locationtext")
       List(viewModel.resolvedLocations) { location in
         VStack(alignment: .leading) {
-          Text(location.result.name ?? "").font(.headline)
-            .accessibilityIdentifier(location.result.name ?? "locationlookupview.result")
+          Text(location.name ?? "").font(.headline)
+            .accessibilityIdentifier(location.name ?? "locationlookupview.result")
           Text(location.postalAddress).font(.subheadline)
         }.onTapGesture {
           viewModel.selectedLocation = location
@@ -37,6 +37,9 @@ struct LocationLookupView: View {
 
 #Preview {
   NavigationStack {
-    LocationLookupView(viewModel: LocationViewModel(title: "Starting Location", selectedLocation: .constant(nil)))
+    LocationLookupView(viewModel: LocationViewModel(
+      title: "Starting Location", 
+      locationLookupService: MapKitLocationLookupService(),
+      selectedLocation: .constant(nil)))
   }
 }

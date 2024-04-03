@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-  ContentView(viewModel: JourneyDetailsViewModel(journeyService: MockJourneyService()))
+  ContentView(viewModel: JourneyDetailsViewModel(journeyService: MockJourneyService(), locationLookupService: MapKitLocationLookupService()))
 }

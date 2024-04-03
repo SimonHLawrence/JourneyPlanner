@@ -11,29 +11,31 @@ import CoreLocation
 class JourneyDetailsViewModel: ObservableObject {
   
   private var journeyService: JourneyService
+  var locationLookupService: LocationLookupService
   
   @Published var startLocationTitle: String = "Starting From"
-  @Published var startLocation: LocationViewModel.Location?
+  @Published var startLocation: Location?
   @Published var viaLocationTitle: String = "Via"
-  @Published var viaLocation: LocationViewModel.Location?
+  @Published var viaLocation: Location?
   @Published var destinationTitle: String = "Destination"
-  @Published var destination: LocationViewModel.Location?
+  @Published var destination: Location?
   @Published var leavingAt: Date = Date.now
   @Published var results: [Journey] = []
   
-  init(journeyService: JourneyService) {
+  init(journeyService: JourneyService, locationLookupService: LocationLookupService) {
     self.journeyService = journeyService
+    self.locationLookupService = locationLookupService
   }
   
   func submit() async throws {
     
     guard
-      let fromCoordinate = startLocation?.result.placemark.coordinate,
-      let toCoordinate = destination?.result.placemark.coordinate
+      let fromCoordinate = startLocation?.coordinate,
+      let toCoordinate = destination?.coordinate
     else {
       return
     }
-    let viaCoordinate = viaLocation?.result.placemark.coordinate
+    let viaCoordinate = viaLocation?.coordinate
     
     let results = try await journeyService.getJourneys(from: fromCoordinate, to: toCoordinate, via: viaCoordinate, leavingAt: leavingAt)
     
