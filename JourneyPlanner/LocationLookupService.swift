@@ -27,13 +27,13 @@ struct Location: Identifiable {
     self.id = id
     self.name = result.name
     self.coordinate = result.placemark.coordinate
+    
     if let postalAddress = result.placemark.postalAddress {
       let formatter = CNPostalAddressFormatter()
       self.postalAddress = formatter.string(from: postalAddress)
     } else {
       self.postalAddress = "-"
     }
-    print(self)
   }
   
   init(id: UUID = UUID(), name: String?, coordinate: CLLocationCoordinate2D, postalAddress: String) {

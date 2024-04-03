@@ -10,13 +10,32 @@ import Combine
 
 class LocationViewModel: ObservableObject {
     
+  enum State {
+    case empty
+    case noResults
+    case ready
+  }
+  
   @Published var title: String
   @Published var locationText: String
   @Published var resolvedLocations: [Location] = []
+  @Published var state: State = .empty
   @Binding var selectedLocation: Location?
   
   var locationLookupService: LocationLookupService
   var bag: Set<AnyCancellable> = []
+  
+  var emptyTitle: String {
+    "Enter an address to find locations."
+  }
+  
+  var noResultsTitle: String {
+    "No matching addresses."
+  }
+  
+  var prompt: String {
+    "Enter a London address..."
+  }
   
   init(title: String, locationLookupService: LocationLookupService, selectedLocation: Binding<Location?>) {
     self.title = title
@@ -37,13 +56,28 @@ class LocationViewModel: ObservableObject {
   
   func performSearch(location: String) {
     
+    guard !location.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+      self.state = .empty
+      self.resolvedLocations = []
+      return
+    }
+    
     Task {
       
-      let results = try await locationLookupService.performSearch(location: location)
-      
-      await MainActor.run {
+      do {
+        let results = try await locationLookupService.performSearch(location: location)
         
-        self.resolvedLocations = results
+        await MainActor.run {
+          
+          self.state = (results.isEmpty) ? .noResults : .ready
+          self.resolvedLocations = results
+        }
+      } catch {
+        await MainActor.run {
+          
+          self.state = .noResults
+          self.resolvedLocations = []
+        }
       }
     }
   }

@@ -14,21 +14,32 @@ struct LocationLookupView: View {
       
   var body: some View {
     VStack(alignment: .leading) {
-      TextField("Enter a London address...", text: $viewModel.locationText)
+      TextField(viewModel.prompt, text: $viewModel.locationText)
         .autocorrectionDisabled()
         .accessibilityIdentifier("locationlookupview.locationtext")
-      List(viewModel.resolvedLocations) { location in
-        VStack(alignment: .leading) {
-          Text(location.name ?? "").font(.headline)
-            .accessibilityIdentifier(location.name ?? "locationlookupview.result")
-          Text(location.postalAddress).font(.subheadline)
-        }.onTapGesture {
-          viewModel.selectedLocation = location
-          presentationMode.wrappedValue.dismiss()
+      switch (viewModel.state) {
+      case .empty:
+        ContentUnavailableView(viewModel.emptyTitle,
+                               systemImage: "magnifyingglass")
+        .accessibilityIdentifier("locationlookupview.empty")
+      case .noResults:
+        ContentUnavailableView(viewModel.noResultsTitle,
+                               systemImage: "exclamationmark.magnifyingglass")
+        .accessibilityIdentifier("locationlookupview.noresults")
+      case .ready:
+        List(viewModel.resolvedLocations) { location in
+          VStack(alignment: .leading) {
+            Text(location.name ?? "").font(.headline)
+              .accessibilityIdentifier(location.name ?? "locationlookupview.result")
+            Text(location.postalAddress).font(.subheadline)
+          }.onTapGesture {
+            viewModel.selectedLocation = location
+            presentationMode.wrappedValue.dismiss()
+          }
         }
+        .listStyle(.inset)
+        .accessibilityIdentifier("locationlookupview")
       }
-      .listStyle(.inset)
-      .accessibilityIdentifier("locationlookupview")
     }
     .padding()
     .navigationTitle(viewModel.title)

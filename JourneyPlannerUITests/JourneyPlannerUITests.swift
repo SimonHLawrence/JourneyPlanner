@@ -27,6 +27,24 @@ final class JourneyPlannerUITests: XCTestCase {
     openFirstRoute(app: app)
   }
   
+  func testJourneyPlannerNoLocationResults() throws {
+    
+    let app = XCUIApplication()
+    app.launchEnvironment = ["XCUITest": "YES"]
+    app.launch()
+    XCTAssert(app.wait(for: .runningForeground, timeout: defaultTimeout))
+    let journeyDetails = element(app: app, identifier: "journeydetailsview")
+    XCTAssert(journeyDetails.waitForExistence(timeout: defaultTimeout))
+    let startLocation = element(app: app, parent: journeyDetails, identifier: "journeydetailsview.startlocation")
+    startLocation.tap()
+    let lookupTextField = app.textFields["locationlookupview.locationtext"]
+    XCTAssert(lookupTextField.waitForExistence(timeout: defaultTimeout))
+    lookupTextField.tap()
+    lookupTextField.typeText("FEOJZXXXXFOJWSSSSS!!!!")
+    let noResults = element(app: app, identifier: "locationlookupview.noresults")
+    XCTAssert(noResults.waitForExistence(timeout: defaultTimeout))
+  }
+  
   func enterJourney(app: XCUIApplication, from: String, to: String, via: String? = nil) {
     
     let journeyDetails = element(app: app, identifier: "journeydetailsview")
@@ -47,8 +65,6 @@ final class JourneyPlannerUITests: XCTestCase {
   func enterLocation(app: XCUIApplication, from: XCUIElement, locationText: String) {
     
     from.tap()
-    let locationLookup = element(app: app, identifier: "locationlookupview")
-    XCTAssert(locationLookup.waitForExistence(timeout: defaultTimeout))
     let lookupTextField = app.textFields["locationlookupview.locationtext"]
     XCTAssert(lookupTextField.waitForExistence(timeout: defaultTimeout))
     lookupTextField.tap()
