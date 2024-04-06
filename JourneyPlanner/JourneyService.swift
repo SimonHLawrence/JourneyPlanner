@@ -18,6 +18,20 @@ extension CLLocationCoordinate2D {
   }
 }
 
+enum JourneyError: Error {
+  case invalidRoute
+}
+
+extension JourneyError: LocalizedError {
+  
+  var errorDescription: String? {
+    switch self {
+    case .invalidRoute:
+      return "The starting point and destination cannot be the same."
+    }
+  }
+}
+
 protocol JourneyService {
   
   func getJourneys(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D, via: CLLocationCoordinate2D?, leavingAt: Date?) async throws -> [Journey]
@@ -26,6 +40,11 @@ protocol JourneyService {
 struct TFLJourneyService: JourneyService {
   
   func getJourneys(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D, via: CLLocationCoordinate2D?, leavingAt: Date?) async throws -> [Journey] {
+    
+    if from == to {
+      throw JourneyError.invalidRoute
+    }
+    
     let transport = URLSessionTransport()
     let journeyPlanner = try TFLJourney.JourneyPlanner(transport: transport)
     
@@ -42,6 +61,10 @@ struct TFLJourneyService: JourneyService {
 struct MockJourneyService: JourneyService {
   
   func getJourneys(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D, via: CLLocationCoordinate2D?, leavingAt: Date?) async throws -> [Journey] {
+    
+    if from == to {
+      throw JourneyError.invalidRoute
+    }
     
     return [Journey.mock()]
   }

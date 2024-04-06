@@ -45,6 +45,17 @@ final class JourneyPlannerUITests: XCTestCase {
     XCTAssert(noResults.waitForExistence(timeout: defaultTimeout))
   }
   
+  func testJourneyPlannerInvalidRoute() throws {
+    
+    let app = XCUIApplication()
+    app.launchEnvironment = ["XCUITest": "YES"]
+    app.launch()
+    XCTAssert(app.wait(for: .runningForeground, timeout: defaultTimeout))
+    enterJourney(app: app, from: "Clink St", to: "Clink St")
+    let errorView = element(app: app, identifier: "journeydetailsview.error")
+    XCTAssert(errorView.waitForExistence(timeout: defaultTimeout))
+  }
+  
   func enterJourney(app: XCUIApplication, from: String, to: String, via: String? = nil) {
     
     let journeyDetails = element(app: app, identifier: "journeydetailsview")

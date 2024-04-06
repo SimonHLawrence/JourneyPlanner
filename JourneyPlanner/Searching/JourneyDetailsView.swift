@@ -62,6 +62,7 @@ struct JourneyDetailsView: View {
     .navigationDestination(isPresented: $showingError) {
       ContentUnavailableView(viewModel.error ?? "An error occurred.", 
                              systemImage: "figure.walk.motion.trianglebadge.exclamationmark")
+      .accessibilityIdentifier("journeydetailsview.error")
     }
   }
   
