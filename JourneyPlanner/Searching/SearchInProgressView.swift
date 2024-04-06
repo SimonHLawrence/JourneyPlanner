@@ -17,7 +17,9 @@ struct SearchInProgressView: View {
       .padding()
     }
     .background {
+      #if os(iOS)
       Color(.secondarySystemBackground)
+      #endif
     }
     .cornerRadius(16.0)
   }

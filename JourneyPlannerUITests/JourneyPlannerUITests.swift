@@ -70,7 +70,7 @@ final class JourneyPlannerUITests: XCTestCase {
     enterLocation(app: app, from: destination, locationText: to)
 
     let findButton = app.buttons["journeydetailsview.findroutes"]
-    findButton.tap()
+    findButton.firstMatch.tap()
   }
   
   func enterLocation(app: XCUIApplication, from: XCUIElement, locationText: String) {
