@@ -10,14 +10,6 @@ import MapKit
 
 class RouteViewModel: ObservableObject {
   
-  struct Route: Identifiable {
-    var id: UUID = UUID()
-    var mode: String
-    var title: String
-    var coordinates: [CLLocationCoordinate2D]
-    var steps: [Step]
-  }
-  
   @Published var journey: Journey
   @Published var routes: [Route]
   @Published var steps: [Step]

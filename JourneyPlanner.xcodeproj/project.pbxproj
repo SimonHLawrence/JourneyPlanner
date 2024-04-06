@@ -33,6 +33,7 @@
 		E27865092BBC348F008E15E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865082BBC348F008E15E5 /* Extensions.swift */; };
 		E27AE4CA2BBD5878002C1065 /* LocationLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27AE4C92BBD5878002C1065 /* LocationLookupService.swift */; };
 		E2ACDC182BC18107009337AA /* SearchInProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACDC172BC18107009337AA /* SearchInProgressView.swift */; };
+		E2ACDC1A2BC1832E009337AA /* JourneyPlannerModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACDC192BC1832E009337AA /* JourneyPlannerModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		E278650A2BBC43AB008E15E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E27AE4C92BBD5878002C1065 /* LocationLookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookupService.swift; sourceTree = "<group>"; };
 		E2ACDC172BC18107009337AA /* SearchInProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInProgressView.swift; sourceTree = "<group>"; };
+		E2ACDC192BC1832E009337AA /* JourneyPlannerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyPlannerModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E20901342BB6F8C600148AE2 /* JourneyPlannerIntegrationTests.swift */,
+				E2ACDC192BC1832E009337AA /* JourneyPlannerModelTests.swift */,
 			);
 			path = JourneyPlannerTests;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E20901352BB6F8C600148AE2 /* JourneyPlannerIntegrationTests.swift in Sources */,
+				E2ACDC1A2BC1832E009337AA /* JourneyPlannerModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

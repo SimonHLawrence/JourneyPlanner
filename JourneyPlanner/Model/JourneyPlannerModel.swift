@@ -84,3 +84,11 @@ struct Journey: Identifiable, Hashable, Equatable {
     self.legs = legs
   }
 }
+
+struct Route: Identifiable {
+  var id: UUID = UUID()
+  var mode: String
+  var title: String
+  var coordinates: [CLLocationCoordinate2D]
+  var steps: [Step]
+}
