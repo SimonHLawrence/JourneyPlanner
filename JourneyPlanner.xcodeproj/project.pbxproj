@@ -32,6 +32,7 @@
 		E27865072BBC30F0008E15E5 /* JourneyResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865062BBC30F0008E15E5 /* JourneyResultsViewModel.swift */; };
 		E27865092BBC348F008E15E5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27865082BBC348F008E15E5 /* Extensions.swift */; };
 		E27AE4CA2BBD5878002C1065 /* LocationLookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27AE4C92BBD5878002C1065 /* LocationLookupService.swift */; };
+		E2ACDC182BC18107009337AA /* SearchInProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2ACDC172BC18107009337AA /* SearchInProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		E27865082BBC348F008E15E5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E278650A2BBC43AB008E15E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E27AE4C92BBD5878002C1065 /* LocationLookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationLookupService.swift; sourceTree = "<group>"; };
+		E2ACDC172BC18107009337AA /* SearchInProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				E21687B82BB86B6800B09D85 /* LocationLookupView.swift */,
 				E21687BA2BB9C88C00B09D85 /* LocationLookupViewModel.swift */,
 				E21687BC2BB9CB4F00B09D85 /* LocationSummaryView.swift */,
+				E2ACDC172BC18107009337AA /* SearchInProgressView.swift */,
 			);
 			path = Searching;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				E21687B92BB86B6800B09D85 /* LocationLookupView.swift in Sources */,
 				E27865072BBC30F0008E15E5 /* JourneyResultsViewModel.swift in Sources */,
 				E27865052BBC30D3008E15E5 /* JourneySummaryViewModel.swift in Sources */,
+				E2ACDC182BC18107009337AA /* SearchInProgressView.swift in Sources */,
 				E21687C12BB9D89400B09D85 /* JourneyDetailsViewModel.swift in Sources */,
 				E209014F2BB6FB7D00148AE2 /* RouteView.swift in Sources */,
 				E21687BB2BB9C88C00B09D85 /* LocationLookupViewModel.swift in Sources */,

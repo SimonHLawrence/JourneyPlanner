@@ -41,26 +41,19 @@ struct JourneyDetailsView: View {
         .accessibilityIdentifier("journeydetailsview.findroutes")
     })
     .accessibilityIdentifier("journeydetailsview")
-    .navigationDestination(isPresented: self.$searchComplete, destination: {
-      JourneyResultsView(viewModel: JourneyResultsViewModel(journeys: viewModel.results))
-    }).overlay {
+    .overlay {
       Group {
         if self.searchInProgress {
-          VStack {
-            ProgressView() {
-              Text("Finding routes...")
-            }
-            .controlSize(.large)
-            .padding()
-          }
-          .background {
-            Color(.secondarySystemBackground)
-          }
+          SearchInProgressView()
+            .accessibilityIdentifier("journeydetails.searchinprogress")
         }
       }
     }
+    .navigationDestination(isPresented: self.$searchComplete) {
+      JourneyResultsView(viewModel: JourneyResultsViewModel(journeys: viewModel.results))
+    }
     .navigationDestination(isPresented: $showingError) {
-      ContentUnavailableView(viewModel.error ?? "An error occurred.", 
+      ContentUnavailableView(viewModel.error ?? "An error occurred.",
                              systemImage: "figure.walk.motion.trianglebadge.exclamationmark")
       .accessibilityIdentifier("journeydetailsview.error")
     }
