@@ -12,7 +12,8 @@ struct JourneyDetailsView: View {
   @ObservedObject var viewModel: JourneyDetailsViewModel
   @State var searchComplete: Bool = false
   @State var searchInProgress: Bool = false
-  
+  @State var showingError = false
+
   var body: some View {
     List {
       LocationSummaryView(title: viewModel.startLocationTitle,
@@ -58,15 +59,20 @@ struct JourneyDetailsView: View {
         }
       }
     }
+    .navigationDestination(isPresented: $showingError) {
+      ContentUnavailableView(viewModel.error ?? "An error occurred.", 
+                             systemImage: "figure.walk.motion.trianglebadge.exclamationmark")
+    }
   }
   
   func findRoutes() {
     searchInProgress = true
     Task {
-      try await viewModel.submit()
+      let ok = try await viewModel.submit()
       await MainActor.run {
         searchInProgress = false
-        searchComplete = true
+        searchComplete = ok
+        showingError = !ok
       }
     }
   }

@@ -11,7 +11,7 @@ struct LocationLookupView: View {
   
   @ObservedObject var viewModel: LocationViewModel
   @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-      
+ 
   var body: some View {
     VStack(alignment: .leading) {
       TextField(viewModel.prompt, text: $viewModel.locationText)
@@ -38,7 +38,7 @@ struct LocationLookupView: View {
           }
         }
         .listStyle(.inset)
-        .accessibilityIdentifier("locationlookupview")
+        .accessibilityIdentifier("locationlookupview.results")
       }
     }
     .padding()

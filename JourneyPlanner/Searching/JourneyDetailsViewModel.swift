@@ -21,27 +21,38 @@ class JourneyDetailsViewModel: ObservableObject {
   @Published var destination: Location?
   @Published var leavingAt: Date = Date.now
   @Published var results: [Journey] = []
+  @Published var error: String?
   
   init(journeyService: JourneyService, locationLookupService: LocationLookupService) {
     self.journeyService = journeyService
     self.locationLookupService = locationLookupService
   }
   
-  func submit() async throws {
+  func submit() async throws -> Bool {
     
     guard
       let fromCoordinate = startLocation?.coordinate,
       let toCoordinate = destination?.coordinate
     else {
-      return
+      return false
     }
     let viaCoordinate = viaLocation?.coordinate
     
-    let results = try await journeyService.getJourneys(from: fromCoordinate, to: toCoordinate, via: viaCoordinate, leavingAt: leavingAt)
-    
-    await MainActor.run {
-    
-      self.results = results
+    do {
+      let results = try await journeyService.getJourneys(from: fromCoordinate, to: toCoordinate, via: viaCoordinate, leavingAt: leavingAt)
+      
+      await MainActor.run {
+        
+        self.results = results
+      }
+      return true
+    } catch {
+      
+      await MainActor.run {
+        
+        self.error = error.localizedDescription
+      }
+      return false
     }
   }
 }
